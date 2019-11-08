@@ -21,8 +21,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        //setContentView(R.layout.activity_main);
+        setContentView(R.layout.test_main);
 
+
+        /*
         tvResult = findViewById(R.id.tvResult);
         btnClick = findViewById(R.id.btnClick);
         btnClick.setOnClickListener(new View.OnClickListener() {
@@ -32,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 showLottery();
 
             }
-        });
+        });*/
     }
 
     private void showLottery(){
@@ -42,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         {
             numbers.add((int) (Math.random()*49+1));
         }
-        tvResult.setText(numbers.toString());
+        //tvResult.setText(numbers.toString());
     }
 
 }
