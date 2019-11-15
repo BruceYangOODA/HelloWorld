@@ -69,6 +69,14 @@ public class ThirdActivity extends AppCompatActivity {
         Button btnExit = findViewById(R.id.btnExit);
         btnExit.setOnClickListener(exitClick);
 
+        Button btnNewGame = findViewById(R.id.btnNew);
+        btnNewGame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                newGame();
+            }
+        });
+
         Button btnSetting = findViewById(R.id.btnSetting);
         btnSetting.setOnClickListener(new View.OnClickListener() {
             @Override

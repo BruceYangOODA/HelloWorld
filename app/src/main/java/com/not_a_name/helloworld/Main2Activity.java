@@ -1,11 +1,11 @@
 package com.not_a_name.helloworld;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -42,6 +42,24 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), FifthActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        TextView tvSixth = findViewById(R.id.tvSixthPage);
+        tvSixth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(),SixthActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        TextView tvEighth = findViewById(R.id.tvEighthPage);
+        tvEighth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(),EighthActivity.class);
                 startActivity(intent);
             }
         });
