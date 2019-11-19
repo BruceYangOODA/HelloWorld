@@ -1,8 +1,11 @@
 package com.not_a_name.helloworld;
 
 import android.Manifest;
+import android.content.ContentValues;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
@@ -27,6 +30,8 @@ public class EighthActivity extends AppCompatActivity {
     private SharedPreferences.Editor editor;
     private TextView tvContent;
     private File sdRoot,appRoot;
+    private MyDBHelper myDBHelper;
+    private SQLiteDatabase db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +77,8 @@ public class EighthActivity extends AppCompatActivity {
             appRoot.mkdirs();
         }
 
+        myDBHelper = new MyDBHelper(this,"mydb",null,1);
+        db = myDBHelper.getWritableDatabase();
         Log.v("not_a_name",sdRoot.getAbsolutePath());
     }
 
@@ -147,5 +154,44 @@ public class EighthActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void test7(View view) {
+        // select * from user where ...group by ...having ...oder by
+        Cursor c = db.query("user",null,null,null,null
+        ,null,null);
+        while (c.moveToNext())
+        {
+            String id = c.getString(0);
+            String username = c.getString(1);
+            String tel = c.getString(2);
+            String birthday = c.getString(3);
+            Log.v("not_a_name",id+":"+username+":"+tel+":"+birthday);
+        }
+    }
+    public void test8(View view) {
+        // insert into user (username,tel,birthday) values ('aa','bb','cc')
+        ContentValues values = new ContentValues();
+        values.put("username","notname");
+        values.put("tel","1234567");
+        values.put("birthday","2000-01-02");
+        db.insert("user",null,values);
+
+        test7(null);
+    }
+
+    public void test9(View view) {
+        // delete from user where _id=2 and username ="brad"
+
+        db.delete("user","_id=? and username =?",new String[]{"2","notname"});
+        test7(null);
+    }
+    public void test10(View view) {
+        // update user set username='peter',tel='0912-123456',where _id=4;
+        ContentValues values = new ContentValues();
+        values.put("username","notname");
+        values.put("tel","0912-123456");
+        db.update("user",values,"_id=?",new String[]{"4"});
+        test7(null);
     }
 }

@@ -43,5 +43,11 @@
         android:textSize="36sp"
         android:text="EIGHTH PAGE"
         android:id="@+id/tvEighthPage"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:text="INTERNET PAGE"
+        android:id="@+id/tvInternetPage"/>
 
 </LinearLayout>

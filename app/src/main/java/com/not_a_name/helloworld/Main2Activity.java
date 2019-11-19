@@ -63,6 +63,14 @@ public class Main2Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        TextView tvInternet = findViewById(R.id.tvInternetPage);
+        tvInternet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(),NetActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
