@@ -67,5 +67,12 @@
         android:textSize="36sp"
         android:text="ViewPager PAGE"
         android:id="@+id/tvViewPager"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:text="WebView"
+        android:id="@+id/tvWebView"/>
+
 
 </LinearLayout>

@@ -7,6 +7,7 @@
          location permissions for the 'MyLocation' functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -20,8 +21,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Android12"></activity>
-        <activity android:name=".DisplayActivity"></activity>
+        <activity android:name=".Android13">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".Android12" />
+        <activity android:name=".DisplayActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -37,9 +46,9 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".iiiAndroid11"></activity>
-        <activity android:name=".DetailActivity"></activity>
-        <activity android:name=".iiiAndroid10"></activity>
+        <activity android:name=".iiiAndroid11" />
+        <activity android:name=".DetailActivity" />
+        <activity android:name=".iiiAndroid10" />
         <activity android:name=".NetActivity" />
         <activity android:name=".EighthActivity" />
         <activity
@@ -49,17 +58,10 @@
         <activity android:name=".FourthActivity" />
         <activity android:name=".ThirdActivity" />
         <activity android:name=".WellCome" />
-        <activity android:name=".Main2Activity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".Main2Activity">
 
         </activity>
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

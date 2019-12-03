@@ -95,5 +95,13 @@ public class Main2Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        TextView tvWebView = findViewById(R.id.tvWebView);
+        tvWebView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(),Android13.class);
+                startActivity(intent);
+            }
+        });
     }
 }
