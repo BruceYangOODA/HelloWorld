@@ -71,6 +71,29 @@ public class Main2Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        TextView tvJSON = findViewById(R.id.tvJSONPage);
+        tvJSON.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(),iiiAndroid10.class);
+                startActivity(intent);
+            }
+        });
+        TextView tvFragment = findViewById(R.id.tvFragmentPage);
+        tvFragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(),iiiAndroid11.class);
+                startActivity(intent);
+            }
+        });
+        TextView tvViewPager = findViewById(R.id.tvViewPager);
+        tvViewPager.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(),Android12.class);
+                startActivity(intent);
+            }
+        });
     }
 }

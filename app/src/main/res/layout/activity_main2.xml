@@ -11,37 +11,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="36sp"
-        android:text="SECOND PAGE"
+        android:text="LinerLayout PAGE"
         android:id="@+id/tvSecondPage"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="36sp"
-        android:text="THIRD PAGE"
+        android:text="GuessNumber"
         android:id="@+id/tvThirdPage"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="36sp"
-        android:text="FORTH PAGE"
+        android:text="ListFragment"
         android:id="@+id/tvFourthPage"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="36sp"
-        android:text="FIFTH PAGE"
+        android:text="TIMER PAGE"
         android:id="@+id/tvFifthPage"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="36sp"
-        android:text="SIXTH PAGE"
+        android:text="CANVAS PAGE"
         android:id="@+id/tvSixthPage"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="36sp"
-        android:text="EIGHTH PAGE"
+        android:text="SQLiter PAGE"
         android:id="@+id/tvEighthPage"/>
     <TextView
         android:layout_width="wrap_content"
@@ -49,5 +49,23 @@
         android:textSize="36sp"
         android:text="INTERNET PAGE"
         android:id="@+id/tvInternetPage"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:text="JSON_GPS PAGE"
+        android:id="@+id/tvJSONPage"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:text="Fragment PAGE"
+        android:id="@+id/tvFragmentPage"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:text="ViewPager PAGE"
+        android:id="@+id/tvViewPager"/>
 
 </LinearLayout>
