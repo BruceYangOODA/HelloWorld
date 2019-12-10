@@ -7,10 +7,12 @@
          location permissions for the 'MyLocation' functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
 
     <application
         android:name=".MainApp"
@@ -21,14 +23,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Android13">
+        <activity android:name=".Android15Sensor"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Android14Contact">
 
         </activity>
+        <activity android:name=".Android13"></activity>
         <activity android:name=".Android12" />
         <activity android:name=".DisplayActivity" />
         <!--
@@ -58,10 +64,8 @@
         <activity android:name=".FourthActivity" />
         <activity android:name=".ThirdActivity" />
         <activity android:name=".WellCome" />
-        <activity android:name=".Main2Activity">
-
-        </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
