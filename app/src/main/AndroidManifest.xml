@@ -13,6 +13,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:name=".MainApp"
@@ -23,18 +25,27 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Android15Sensor"
-            android:screenOrientation="portrait">
+        <activity android:name=".ScanActivity"></activity>
+        <activity android:name=".Android18Barcoder">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Android14Contact">
 
-        </activity>
-        <activity android:name=".Android13"></activity>
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".Android17Service"></activity>
+        <activity android:name=".Android16Sound" />
+        <activity
+            android:name=".Android15Sensor"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Android14Contact" />
+        <activity android:name=".Android13" />
         <activity android:name=".Android12" />
         <activity android:name=".DisplayActivity" />
         <!--
